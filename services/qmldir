@@ -1,2 +1,0 @@
-module RemoteDesktop.Services
-singleton RemoteStatus 1.0 RemoteStatus.qml

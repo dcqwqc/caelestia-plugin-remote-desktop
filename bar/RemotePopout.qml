@@ -7,7 +7,7 @@ import Caelestia.Config
 import qs.components
 import qs.components.controls
 import qs.services
-import "../services" as RemoteDesktop
+import dcqwqc.remotedesktop.services as RemoteDesktop
 import qs.utils
 
 ColumnLayout {
