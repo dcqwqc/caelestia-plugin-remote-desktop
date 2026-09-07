@@ -35,12 +35,16 @@ one started from a keybind behave identically.
 ## Status
 
 Caelestia's plugin loader is not released yet — it lives on upstream's unmerged
-`feat/plugins` branch, and the Plugins page there is still a mockup rendering
-four fake cards. Nothing here can load until that lands.
+`feat/plugins` branch, and the Plugins page there is a mockup rendering four
+fake cards. So this needs a shell that carries the loader:
 
-It is built against the real schema rather than a guess at it: manifest keys and
-the entry point type strings are taken from that branch's parser, so this should
-need renaming rather than rewriting when the API ships.
+- **On upstream Caelestia**, wait for that branch to merge.
+- **On a fork that has cherry-picked it** (`plugin/src/Caelestia/Plugins`, plus a
+  Plugins page and the quick-toggle / bar-entry hooks), it loads and is managed
+  from Nexus → Plugins today.
+
+The manifest and entry points are built against that branch's own parser rather
+than a guess at it, so the shape is the real one.
 
 ## Install
 
