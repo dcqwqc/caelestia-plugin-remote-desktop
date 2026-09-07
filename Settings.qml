@@ -50,10 +50,10 @@ SettingsObject {
         inputType: SettingMeta.Switch
     }
 
-    property string captureSystemKeys: "never"
+    property string captureSystemKeys: "always"
     SettingMeta on captureSystemKeys {
         label: "Send system shortcuts to the remote"
-        description: "Moonlight locks the pointer while focused, so a focus change is the only way out of a session. Capturing shortcuts takes away the keys that do it."
+        description: "`always` gives the remote everything, Super included, so nothing local answers while you are in the session -- the compositor keybind that toggles it is marked dont_inhibit and is the deliberate way out. `never` keeps your own shortcuts and lets any of them release the pointer."
         icon: "keyboard_command_key"
         inputType: SettingMeta.SplitButton
         options: ["never", "fullscreen", "always"]
